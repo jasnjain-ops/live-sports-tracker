@@ -21,10 +21,11 @@
         <section class="sports">
             <h2>Sports</h2>
 
-            <button>⚽ Football</button>
-            <button>🏏 Cricket</button>
-            <button>🏀 Basketball</button>
-            <button>🎾 Tennis</button>
+            <button onclick="selectSport('Football')">⚽ Football</button>
+            <button onclick="selectSport('Cricket')">🏏 Cricket</button>
+            <button onclick="selectSport('Basketball')">🏀 Basketball</button>
+            <button onclick="selectSport('Tennis')">🎾 Tennis</button>
+
         </section>
 
 
@@ -32,27 +33,32 @@
 
             <h2>Live Matches</h2>
 
-            <div class="match-card">
+            <div id="match-list">
 
-                <div>
-                    <h3>Team A</h3>
-                    <p>2</p>
-                </div>
+    <div class="match-card">
 
-                <div class="live">
-                    🔴 LIVE
-                </div>
+        <div>
+            <h3>Team A</h3>
+            <p>2</p>
+        </div>
 
-                <div>
-                    <h3>Team B</h3>
-                    <p>1</p>
-                </div>
+        <div class="live">
+            🔴 LIVE
+        </div>
 
-            </div>
+        <div>
+            <h3>Team B</h3>
+            <p>1</p>
+        </div>
+
+    </div>
+
+</div>
 
         </section>
 
     </main>
+    <script src="script.js"></script>
 
 </body>
 </html>
