@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #d1d5db;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.sports {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.sports h2 {
+    margin-bottom: 20px;
+}
+
+.sports button {
+    padding: 12px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.sports button:hover {
+    background-color: #1d4ed8;
+}
+
+.matches {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.matches h2 {
+    margin-bottom: 20px;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.match-card h3 {
+    margin-bottom: 10px;
+}
+
+.match-card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.live {
+    color: red;
+    font-weight: bold;
+}
