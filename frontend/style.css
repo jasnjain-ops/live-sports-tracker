@@ -92,3 +92,1317 @@ main {
     color: red;
     font-weight: bold;
 }
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #555;
+}
+
+.no-matches {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+.error {
+    text-align: center;
+    padding: 30px;
+    color: red;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .sports {
+        padding: 20px;
+    }
+
+    .sports button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .match-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+.section-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.match-card {
+    margin-bottom: 15px;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #555;
+}
+
+.no-matches {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+.error {
+    text-align: center;
+    padding: 30px;
+    color: red;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .sports {
+        padding: 20px;
+    }
+
+    .sports button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .match-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+/* ============================================================
+   STYLISH FOOTBALL MATCH CARDS
+   ============================================================ */
+
+.football-card {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f8fafc 100%
+    );
+
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.06);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Decorative top line */
+
+.football-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed,
+        #2563eb
+    );
+
+    opacity: 0.8;
+}
+
+
+/* Hover */
+
+.football-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ============================================================
+   TOP OF CARD
+   ============================================================ */
+
+.football-card-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.football-match-date {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+
+    color: #64748b;
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   STATUS BADGES
+   ============================================================ */
+
+.football-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* LIVE */
+
+.live-status {
+    color: #dc2626;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 68, 68, 0.05);
+
+    animation: livePulse 1.8s infinite;
+}
+
+
+/* LIVE animation */
+
+@keyframes livePulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(239, 68, 68, 0.20);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 7px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(239, 68, 68, 0);
+    }
+
+}
+
+
+/* FINISHED */
+
+.finished-status {
+    color: #15803d;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* UPCOMING */
+
+.upcoming-status {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+}
+
+
+/* POSTPONED */
+
+.postponed-status {
+    color: #b45309;
+
+    background: #fffbeb;
+
+    border: 1px solid #fde68a;
+}
+
+
+/* ============================================================
+   MATCH AREA
+   ============================================================ */
+
+.football-match {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 160px;
+
+    position: relative;
+}
+
+
+/* ============================================================
+   TEAM
+   ============================================================ */
+
+.football-team {
+    width: 40%;
+
+    text-align: center;
+
+    transition: transform 0.25s ease;
+}
+
+.football-card:hover .football-team {
+    transform: translateY(-2px);
+}
+
+.football-team h3 {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+
+    margin: 12px 0 7px;
+
+    line-height: 1.35;
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.football-logo-container {
+    width: 72px;
+    height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #eef2f7;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.06);
+
+    transition: transform 0.25s ease;
+}
+
+.football-card:hover .football-logo-container {
+    transform: scale(1.06);
+}
+
+.football-team-logo {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+/* ============================================================
+   SCORE
+   ============================================================ */
+
+.football-score {
+    font-size: 31px;
+
+    font-weight: 800;
+
+    color: #0f172a;
+
+    margin: 0;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   CENTER SCOREBOARD
+   ============================================================ */
+
+.football-middle {
+    width: 20%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 9px;
+}
+
+
+/* VS badge */
+
+.football-vs {
+    min-width: 42px;
+
+    padding: 7px 10px;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    border: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Result */
+
+.result-info {
+    font-size: 10px;
+
+    color: #64748b;
+
+    max-width: 130px;
+
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   CLICK HINT
+   ============================================================ */
+
+.football-click-hint {
+    margin-top: 16px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eef2f7;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    transition:
+        color 0.2s ease,
+        letter-spacing 0.2s ease;
+}
+
+.football-card:hover .football-click-hint {
+    color: #2563eb;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* ============================================================
+   FOOTBALL FILTERS
+   ============================================================ */
+
+.football-filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+}
+
+.football-filter {
+    padding: 9px 16px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.football-filter:hover {
+    transform: translateY(-2px);
+
+    background: #f8fafc;
+
+    box-shadow:
+        0 4px 10px rgba(15, 23, 42, 0.07);
+}
+
+.football-filter.active {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: white;
+
+    border-color: transparent;
+
+    box-shadow:
+        0 5px 14px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ============================================================
+   SEARCH BAR
+   ============================================================ */
+
+.football-search-container {
+    display: none;
+
+    margin-bottom: 18px;
+
+    position: relative;
+}
+
+#football-search {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border: 1px solid #dbe3ed;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#football-search:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+#football-search::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
+
+.section-title {
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .football-card {
+        padding: 16px;
+
+        border-radius: 16px;
+    }
+
+    .football-card-top {
+        margin-bottom: 15px;
+    }
+
+    .football-match-date {
+        font-size: 10px;
+    }
+
+    .football-status {
+        font-size: 10px;
+
+        padding: 5px 9px;
+    }
+
+    .football-match {
+        min-height: 135px;
+    }
+
+    .football-team {
+        width: 40%;
+    }
+
+    .football-team h3 {
+        font-size: 13px;
+    }
+
+    .football-logo-container {
+        width: 58px;
+        height: 58px;
+
+        border-radius: 14px;
+    }
+
+    .football-team-logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .football-score {
+        font-size: 24px;
+    }
+
+    .football-middle {
+        width: 20%;
+    }
+
+    .football-vs {
+        font-size: 10px;
+
+        min-width: 35px;
+
+        padding: 6px 7px;
+    }
+
+    .result-info {
+        font-size: 9px;
+
+        max-width: 75px;
+    }
+
+    .football-filter {
+        padding: 8px 12px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+    .football-card {
+        padding: 13px;
+    }
+
+    .football-team h3 {
+        font-size: 12px;
+    }
+
+    .football-logo-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .football-team-logo {
+        width: 37px;
+        height: 37px;
+    }
+
+    .football-score {
+        font-size: 21px;
+    }
+
+}
+
+/* ============================================================
+   FOOTBALL MATCH DETAILS
+   ============================================================ */
+
+.football-card {
+    cursor: pointer;
+}
+
+.football-click-hint {
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.football-card:hover .football-click-hint {
+    color: #2563eb;
+}
+
+
+/* ============================================================
+   MATCH DETAILS MODAL - PROFESSIONAL DESIGN
+   ============================================================ */
+
+.football-details-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(6px);
+
+    z-index: 9999;
+}
+
+
+/* ============================================================
+   MAIN POPUP
+   ============================================================ */
+
+.football-details-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+
+    animation: detailsPopup 0.25s ease;
+}
+
+
+/* Popup animation */
+
+@keyframes detailsPopup {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ============================================================
+   CLOSE BUTTON
+   ============================================================ */
+
+.football-details-close {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.football-details-close:hover {
+    background: #e2e8f0;
+    color: #111827;
+
+    transform: rotate(90deg);
+}
+
+
+/* ============================================================
+   POPUP TITLE
+   ============================================================ */
+
+.football-details-box h2 {
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    font-size: 24px;
+
+    color: #111827;
+}
+
+
+/* ============================================================
+   MATCH STATUS
+   ============================================================ */
+
+.details-status {
+    display: table;
+
+    margin: 0 auto 25px auto;
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   TEAMS AREA
+   ============================================================ */
+
+.details-teams {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+
+    text-align: center;
+
+    padding: 25px 10px;
+
+    margin-bottom: 25px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef2ff
+    );
+}
+
+
+/* Individual team */
+
+.details-team {
+    width: 35%;
+
+    text-align: center;
+}
+
+
+/* Team logo */
+
+.details-team-logo {
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+
+    transition: transform 0.2s;
+}
+
+.details-team-logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* Team name */
+
+.details-team h3 {
+    margin: 8px 0;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    color: #1e293b;
+}
+
+
+/* Team score */
+
+.details-score {
+    margin-top: 8px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+
+/* ============================================================
+   VS SECTION
+   ============================================================ */
+
+.details-vs {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ============================================================
+   LEAGUE INFORMATION
+   ============================================================ */
+
+.details-league {
+    text-align: center;
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* ============================================================
+   INFORMATION SECTION
+   ============================================================ */
+
+.details-information {
+    margin-top: 10px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+/* Information row */
+
+.details-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 6px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    font-size: 14px;
+}
+
+
+/* Information label */
+
+.details-row span {
+    color: #64748b;
+
+    font-weight: 500;
+}
+
+
+/* Information value */
+
+.details-row strong {
+    color: #1e293b;
+
+    text-align: right;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   RESULT INFORMATION
+   ============================================================ */
+
+.details-result {
+    margin-top: 18px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+.details-result span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-weight: bold;
+}
+
+
+.details-result p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+.football-details-box::-webkit-scrollbar {
+    width: 7px;
+}
+
+.football-details-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.football-details-box::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+.football-details-box::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .football-details-modal {
+        padding: 10px;
+    }
+
+    .football-details-box {
+        max-height: 94vh;
+
+        padding: 22px 16px;
+
+        border-radius: 16px;
+    }
+
+    .football-details-box h2 {
+        font-size: 21px;
+
+        padding-right: 25px;
+    }
+
+    .football-details-close {
+        top: 12px;
+        right: 12px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+    .details-teams {
+        gap: 8px;
+
+        padding: 20px 5px;
+    }
+
+    .details-team {
+        width: 40%;
+    }
+
+    .details-team-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .details-team h3 {
+        font-size: 14px;
+    }
+
+    .details-score {
+        font-size: 27px;
+    }
+
+    .details-vs {
+        width: 38px;
+        height: 38px;
+
+        font-size: 11px;
+    }
+
+    .details-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .details-row strong {
+        text-align: left;
+    }
+
+}
+/* ============================================================
+   FOOTBALL REFRESH BUTTON
+   ============================================================ */
+
+.matches-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.matches-header h2 {
+    margin-bottom: 0;
+}
+
+.football-refresh {
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.football-refresh:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.football-refresh:active {
+    transform: scale(0.96);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .matches-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .football-refresh {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+}
+.football-refresh:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+/* ============================================================
+   LAST UPDATED
+   ============================================================ */
+
+.last-updated {
+    text-align: right;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    color: #64748b;
+
+    font-weight: 500;
+}
+/* ============================================================
+   LIVE MATCH EFFECT
+   ============================================================ */
+
+.live-status {
+    position: relative;
+
+    animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.35);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(220, 38, 38, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    }
+
+}
+
+
+/* Slightly highlight live cards */
+
+.football-card:has(.live-status) {
+    border-left: 4px solid #dc2626;
+}

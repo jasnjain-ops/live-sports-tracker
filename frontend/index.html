@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,46 +20,78 @@
     <main>
 
         <section class="sports">
+
             <h2>Sports</h2>
 
-            <button onclick="selectSport('Football')">⚽ Football</button>
-            <button onclick="selectSport('Cricket')">🏏 Cricket</button>
-            <button onclick="selectSport('Basketball')">🏀 Basketball</button>
-            <button onclick="selectSport('Tennis')">🎾 Tennis</button>
+            <button onclick="selectSport('football')">
+                ⚽ Football
+            </button>
+
+            <button onclick="selectSport('cricket')">
+                🏏 Cricket
+            </button>
+
+            <button onclick="selectSport('basketball')">
+                🏀 Basketball
+            </button>
+
+            <button onclick="selectSport('tennis')">
+                🎾 Tennis
+            </button>
+
+            <button onclick="selectSport('f1')">
+                🏎️ Formula 1
+            </button>
 
         </section>
 
 
         <section class="matches">
 
-            <h2>Live Matches</h2>
+            <div class="matches-header">
+
+                <h2 id="matches-title">
+                    Live Matches
+                </h2>
+
+                <button
+                    id="football-refresh"
+                    class="football-refresh">
+                    🔄 Refresh
+                </button>
+
+            </div>
+
+
+            <div
+                id="football-search-container"
+                class="football-search-container">
+
+                <input
+                    type="text"
+                    id="football-search"
+                    placeholder="🔍 Search team name..."
+                    autocomplete="off"
+                >
+
+            </div>
+
 
             <div id="match-list">
 
-    <div class="match-card">
+                <p class="loading">
+                    Select a sport to load matches...
+                </p>
 
-        <div>
-            <h3>Team A</h3>
-            <p>2</p>
-        </div>
-
-        <div class="live">
-            🔴 LIVE
-        </div>
-
-        <div>
-            <h3>Team B</h3>
-            <p>1</p>
-        </div>
-
-    </div>
-
-</div>
+            </div>
 
         </section>
 
     </main>
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
